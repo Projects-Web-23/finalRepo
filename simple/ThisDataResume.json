@@ -1,0 +1,93 @@
+
+{
+
+    "FullName":"thomas",
+    "Email":"thomas.doe@email.com",
+    "Address":"19 parker street",
+    "Phone":"19",
+    "Links":[{
+        "title":"linkedin",
+        "url":"@linked"
+    }],    
+    "Summary":"iam machine learning engineer",
+    "Objective":"jobob",
+    "JobDuration": "3weeks",
+    "Available": "yes",
+    "WorkExperience":[
+        {
+                "title":"Tagreba",
+                "company":"Co-Founder",
+                "responsibilities": "responsibilities",
+                "achievements": "achievements",
+                "companylocation": "companylocation",
+                "briefdescription": "briefdescription"
+        },
+        {
+                "title":"Tagreba",
+                "company":"Co-Founder",
+                "responsibilities": "responsibilities",
+                "achievements": "achievements",
+                "companylocation": "companylocation",
+                "briefdescription": "briefdescription"
+        }
+    ],
+    "Degreesearned": "master", 
+                
+    "Graduationdates": "enginner",
+    "institutionsLocation": "company",
+    "educationalinstitutions": "cairo",
+    "fieldofstudy": "ai",
+    
+    "Skills":[
+        "c++",
+        "python"
+    ],
+    "honors":[
+        "a",
+        "b"
+    ],
+    "Languages":[
+        "english"
+        ,"german"
+    ],
+    "Certificates":[
+        {
+        "title": "certTitle",           
+        "cert_date":"Cdate",
+        " link": "certLink",           
+        "description":"certDescription"
+        }
+    ],
+
+    "Projects":[{
+        "title": "projecttitle",           
+        "start_date":" sdate",
+        "end_date":"edate",
+        "collaborator": "collaborator",           
+        "briefdescription": "briefdescription"
+    },
+    {
+        "title": "projecttitle",           
+        "start_date":" sdate",
+        "end_date":"edate",
+        "collaborator": "collaborator",           
+        "briefdescription": "briefdescription"
+    }
+        
+    
+    ],
+    "volunteering":[
+        {
+        "organization":" volunteerPlace",           
+        "start_date": "sdate",
+        "end_date":"edate",
+        "role":"vRole",         
+        "briefdescription":" briefdescription"
+        }
+    
+    ],
+    "Hobbies":[
+        "Painting"
+        ,"Singing"
+    ]
+}

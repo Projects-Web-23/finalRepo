@@ -1,0 +1,59 @@
+.detail {
+    margin: auto;
+    line-height: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'montserrat';
+    text-align: start;
+    color: rgb(0, 8, 255);
+
+}
+
+
+
+.professionalSum {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+}
+
+
+.sqaure {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    margin: none;
+    align-self: stretch;
+}
+
+
+.professionalheader {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Lobster';
+    color: rgb(255, 111, 0);
+}
+
+.namesumm {
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Montserrat';
+    color: rgb(255, 111, 0);
+    text-align: center;
+}
+
+
+.head {
+    margin: auto;
+    line-height: 40px;
+    font-size: 27px;
+    font-weight: bold;
+    font-family: 'lobster';
+    text-align: start;
+    color: rgb(0, 8, 255);
+
+}

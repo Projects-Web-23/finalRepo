@@ -1,0 +1,174 @@
+.sqaure {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 900px;
+}
+
+.workmain {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.workheader {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Lobster';
+    color: rgb(255, 111, 0);
+}
+
+
+
+.outlink {
+    margin: 15px;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ececec;
+    box-shadow: 0px 3px 3px 0px rgb(97, 97, 97);
+    min-height: 55px;
+
+
+}
+
+.new-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+/* .feild {
+
+    background-color: #e4e4e4;
+    border-radius: 15px;
+    margin-left: 20px;
+    padding: 20px 10px;
+    text-decoration: none;
+    border: none;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    width: 300px;
+    text-align: start;
+
+
+} */
+
+.textarea {
+    width: 600px;
+    height: 50px;
+    background-color: #ffffff;
+    margin-left: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px 10px;
+    text-decoration: none;
+    border: none;
+
+
+}
+
+.smallform {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.addwork {
+
+    margin-right: 10px;
+
+    /* flex: 1; */
+    margin: auto;
+    font-size: 35px;
+    font-weight: bolder;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 30px;
+    background-color: #6f85ff;
+    padding: 3px 15px;
+    /* height: 50px;
+        width: 50px; */
+    text-align: center;
+    left: 770px;
+    top: 4px;
+    box-shadow: 0px 3px 3px 0px rgb(127, 127, 127);
+
+}
+
+.addwork:hover {
+    background-color: blue;
+}
+
+.namework {
+    display: block;
+    padding-left: 20px;
+    text-align: start;
+    /* float: left; */
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6b01;
+    font-family: 'Montserrat';
+}
+
+.jobhead {
+    /* margin-top: 40px; */
+    margin-left: 40px;
+    /* padding-top: 20px; */
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-family: 'Montserrat';
+    color: #0127ff;
+    font-weight: bolder;
+
+}
+
+.jobcampany,
+.jobcampanyloca {
+    color: #eb6c6c;
+    /* margin-top: 20px; */
+    margin-left: 40px;
+    font-size: 25px;
+
+    /* margin-bottom: 10px; */
+    font-family: 'Montserrat';
+    /* color: #6f85ff; */
+    font-weight: bold;
+
+}
+
+.jobdate {
+    margin: 5px 0px;
+    ;
+}
+
+
+.jobdate,
+.jobres,
+.jobache,
+.summery {
+    color: #687fff;
+    /* margin-top: 17px; */
+    margin-left: 40px;
+    font-size: 17px;
+    /* margin-bottom: 2px; */
+    font-family: 'Montserrat';
+    /* color: #6f85ff; */
+    /* font-weight: bold; */
+}
+
+
+
+
+.cardwork {
+    box-shadow: 0px 2px 3px 0px rgb(47, 113, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    /* padding: 20px; */
+    text-align: start;
+    margin: 20px;
+
+}

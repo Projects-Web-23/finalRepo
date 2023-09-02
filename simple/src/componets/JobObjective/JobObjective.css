@@ -1,0 +1,53 @@
+.Jobmain {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    margin: 20px;
+}
+
+.sqaurejob {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background-color: rgb(154, 210, 236); */
+    /* border-radius: 20px; */
+    /* box-shadow: 0px 3px 3px 0px rgb(68, 68, 149); */
+    /* padding:ss 20px; */
+    flex: 1;
+
+}
+
+.Jobheader {
+    font-size: 30px;
+    font-family: 'lobster';
+    font-weight: bold;
+    color: rgb(255, 111, 0);
+    /* box-shadow: 0px 4px 4px 0px black; */
+
+}
+
+input {
+    margin-left: 20px;
+    background-color: #ffffff;
+    /* border: 1px solid gray; */
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px 10px;
+    text-decoration: none;
+    border: none;
+    font-size: 18px;
+    /* color: gray; */
+    font-family: 'Ubuntu', sans-serif;
+    width: 300px;
+    text-align: start;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+label {
+    text-align: start;
+}

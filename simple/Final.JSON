@@ -1,0 +1,77 @@
+
+{
+
+    "FullName":"thomas",
+    "Email":"thomas.doe@email.com",
+    "Address":"19 parker street",
+    "Phone":"19",
+    "Links":[{
+        "title":"linkedin",
+        "url":"@linked"
+    }],    
+    "Summary":"iam machine learning engineer",
+    "WorkExperience":[
+        {
+                "title":"Tagreba",
+                "company":"Co-Founder",
+                "Start": "august 2022",
+                "End": "september 2023",
+                "briefdescription": "briefdescription"
+        },
+        {
+                "title":"Tagreba",
+                "company":"Co-Founder",
+                "Start": "august 2022",
+                "End": "september 2023",
+                "briefdescription": "briefdescription"
+        }
+      
+    ],
+    "Degreesearned": "master", 
+    "Graduationdates": "enginner",
+    "educationalinstitutions": "cairo",
+    "fieldofstudy": "ai",
+    
+    "Skills":[
+        "c++",
+        "python"
+    ],
+    "honors":[
+        {          
+          "header":"robotics",
+            "organization":"beta"
+        }
+    ],
+    "Languages":[
+        "english"
+        ,"german"
+    ],
+    "Certificates":[
+        {
+        "title": "certTitle",           
+        "cert_date":"Cdate",
+        " link": "certLink",           
+        "description":"certDescription"
+        }
+    ],
+
+    "Projects":[{
+        "title": "projecttitle",           
+        "start_date":" sdate",
+        "end_date":"edate",
+        "collaborator": "collaborator",           
+        "briefdescription": "briefdescription"
+    },
+    {
+        "title": "projecttitle",           
+        "start_date":" sdate",
+        "end_date":"edate",
+        "collaborator": "collaborator",           
+        "briefdescription": "briefdescription"
+    }
+    ],
+    "Hobbies":[
+        "Painting"
+        ,"Singing"
+    ]
+}

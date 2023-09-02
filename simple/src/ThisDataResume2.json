@@ -1,0 +1,72 @@
+{
+
+    "Name":"Thomas Doe",
+    "Email":"thomas.doe@email.com",
+    "Address":"19 parker street",
+    "Phone":"01001636728",
+    "ProfessionalSummary":"iam machine learning engineer iam machine learning engineer iam machine learning engineer iam machine learning engineer iam machine learning engineer",
+    "WorkExperience":[
+        {
+                "Name":"Tagreba",
+                "Position":"Co-Founder",
+                "StartDate": "June 2022",
+                "EndDate":"Present",
+                "Description":"Built an aggregator platform that connects high school students to 100+ updated opportunities using a combination of WIX tools and integrated APIs. Managed technical activities, which involved MVP iterations and development, solving technical issues associated with the website, catering the platforms to user needs, designing and implementing new product features and moving the platform from the MVP phase to the product phase."
+            },
+            {
+                "Name":"CUERT",
+                "Position":"Autonomous Developer",
+                "StartDate": "Nov 2022",
+                "EndDate":"Present",
+                "Description":"Worked with RRT*, A*and other motion-planning algorithms to develop an autonomous navigation code for a self-driving car.Participated as a team member in Shell Eco-Marathon virtual Autonomous competition, in which Cairo University Eco-Racing Team secured a place on the contest leaderboard. Prepared the autonomous car for Shell Eco- marathon."
+            },
+            {
+                "Name":"CUERT",
+                "Position":"Autonomous Developer",
+                "StartDate": "Nov 2022",
+                "EndDate":"Present",
+                "Description":"Worked with RRT*, A*and other motion-planning algorithms to develop an autonomous navigation code for a self-driving car.Participated as a team member in Shell Eco-Marathon virtual Autonomous competition, in which Cairo University Eco-Racing Team secured a place on the contest leaderboard. Prepared the autonomous car for Shell Eco- marathon."
+            }
+    ],
+    "Education":
+        [
+            {
+                "Name":"Cairo University",
+                "Degree":"Bachelor of Engineering",
+                "StartDate": "Nov 2021",
+                "EndDate":"Present",
+                "GPA":"3.67"
+            },
+            {
+                "Name":"BIS",
+                "Degree":"IGCSE",
+                "StartDate": "Nov 2018",
+                "EndDate":"June 2021",
+                "GPA":"4.0"
+            }
+    
+        ]
+    ,
+    "SoftSkills":[
+        "Patience","Persuasive", "Resilience", "Communication","Public Speaking"
+    ],
+    "TechnicalSkills":["C++","Python", "Adobe Photoshop", "Adobe Illustrator"],
+    "Certifications":["Robotics", "Embedded", "Graphic Design", "Web Development"],
+    "Languages":["English", "Arabic", "French", "German"],
+    "Project":[{
+       "Name":"Maze Runner page",
+       "Description":"Html project",
+        "Awards":""
+    },
+    {
+        "Name":"To do app",
+       "Description":"React Native",
+        "Awards":""
+    }
+        
+    
+    ],
+    "Hobbies":[
+        "Painting","Singing"
+    ]}
+    
