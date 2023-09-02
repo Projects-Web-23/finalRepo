@@ -2,12 +2,7 @@ import {Cv } from "../models/Cv.js";
 import { User } from "../models/User.js";
 const CvController = {
     create: async (req, res) => {
-        // Validate the request body against the post schema
-      /*  const { error } = validateSchema.validate(req.body, { abortEarly: false });
-        
-        if (error) {
-        return res.status(422).json(error.details);
-        }*/
+       
         try {
             if(!req.user._id)
             return res.status(400).json({ error: "You must login first" });
