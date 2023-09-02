@@ -29,7 +29,7 @@ const BuiltResume = () => {
     const [Hobbies, setHobbies] = useState([]);
     const [Honors, setHonors] = useState([]);
     const [Links, setLinks] = useState([]);
-    const [info, setinfo] = useState({});
+   
     const [Degreesearned, setDegreesearned] = useState('');
     const [educationalinstitutions, seteducationalinstitutions] = useState('');
     const [fieldofstudy, setfieldofstudy] = useState('');
@@ -39,15 +39,15 @@ const BuiltResume = () => {
         try {
             const response = await axios({
                 method: "get",
-                url: "http://localhost:8080/Cv",
+                url: "http://localhost:8080/Cv/",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 },
 
             })
-            let ob = response.data.found[0];
-            console.log("done", ob);
-            setinfo(ob);
+            console.log(response.data);
+            let ob = response.data;
+            
 
             setName(ob.FullName);
             setEmail(ob.Email);
@@ -62,7 +62,7 @@ const BuiltResume = () => {
             setLang(ob.Languages);
             setHobbies(ob.Hobbies);
             setHonors(ob.honors);
-            setDegreesearned(ob.setDegreesearned);
+            setDegreesearned(ob.Degreesearned);
             seteducationalinstitutions(ob.educationalinstitutions);
             setfieldofstudy(ob.fieldofstudy);
             setGraduationdates(ob.Graduationdates);

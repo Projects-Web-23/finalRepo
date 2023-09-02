@@ -25,8 +25,9 @@ const CvController = {
         
         const found= await Cv.find({UserId:req.user._id});
         if(!found)
-        return res.status(400).json({ error: "THis user hasn't created any Cvs" });            
-         return res.json({found});
+        return res.status(400).json({ error: "THis user hasn't created any Cvs" });       
+    let el= found[found.length-1];     
+         return res.json(el);
         
       
     }
