@@ -7,29 +7,38 @@ const Certificate = ({ title, part, setpart, section, setSection }) => {
     const [certificates, setCertificates] = useState([]);
 
     const [add, setadd] = useState(false);//button
-    const [certTitle, setCertTitle] = useState('');//title    
+    const [certTitle, setCertTitle] = useState('');//title
     const [certDescription, setCertDescription] = useState(''); //date
-    const [Cdate, setCdate] = useState(''); 
-    const [certLink, setCertLink] = useState('');//collaboraters   
-    
+    const [Cdate, setCdate] = useState('');
+    const [certLink, setCertLink] = useState('');//collaboraters
+
 
 
 
     const addCert = () => {
         setadd(false);
         const ex = {
-            title: certTitle,           
-            cert_date:Cdate,
-            link: certLink,           
-            description:certDescription
+            title: certTitle,
+            cert_date: Cdate,
+            link: certLink,
+            description: certDescription
 
         };
         setCertificates([...certificates, ex]);
-        setpart({...part, Certificates:[...certificates, ex]});
+        setpart({ ...part, Certificates: [...certificates, ex] });
 
 
     }
+    const deleteone = (ind) => {
 
+        const arr = certificates.filter((ele, i) => {
+            if (ind !== i) {
+                return ele;
+
+            }
+        });
+        setCertificates(arr);
+    }
 
 
     return (
@@ -38,15 +47,15 @@ const Certificate = ({ title, part, setpart, section, setSection }) => {
                 <h1 className="workheader"  >{title}</h1>
                 <div className="left" >
                     <form className="formjob">
-                        {certificates.map((ele) => {
+                        {certificates.map((ele, ind) => {
                             return (
 
                                 <div className="cardwork">
-                                    <div className="jobhead">
+                                    <div className="certhead">
                                         {ele.title}
 
                                     </div>
-                                    <div className="jobhead">
+                                    <div className="certlink">
                                         {ele.link}
 
                                     </div>
@@ -54,16 +63,17 @@ const Certificate = ({ title, part, setpart, section, setSection }) => {
                                         {ele.description}
 
                                     </div>
-                                    
+
                                     <div className="jobdate">
                                         {ele.cert_date}
 
                                     </div>
-                                    
-                                    
-                                    
-                                   
+                                    <button className="deletecert" onClick={() => { deleteone(ind) }}>X</button>
+
+
+
                                 </div>
+
                             )
                         })}
 
@@ -77,13 +87,13 @@ const Certificate = ({ title, part, setpart, section, setSection }) => {
                             {(add && (
                                 <div className="new-form " >
                                     <div className="smallform">
-                                   
+
                                         <div className="card">
                                             <label className="name" > Certificate/License Title  </label>
-                                            <input className="feild" type="text" placeholder="please enter Certificate title " onChange={(token) =>  setCertTitle(token.target.value)} />
-                                        </div> 
-                                                                              
-                                        
+                                            <input className="feild" type="text" placeholder="please enter Certificate title " onChange={(token) => setCertTitle(token.target.value)} />
+                                        </div>
+
+
                                         <div className="card">
                                             <label className="name" > Certification Date  </label>
                                             <input className="feild" type="date" placeholder="please enter Certificate date " onChange={(token) => setCdate(token.target.value)} />
@@ -94,8 +104,8 @@ const Certificate = ({ title, part, setpart, section, setSection }) => {
                                         </div>
 
                                     </div>
-                                    
-                                   
+
+
 
 
 

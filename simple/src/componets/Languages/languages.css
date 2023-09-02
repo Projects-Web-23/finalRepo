@@ -1,0 +1,55 @@
+.mainlang {
+    display: flex;
+    flex-direction: row;
+
+}
+
+img {
+    width: 300px;
+    height: 400px;
+    flex: 1;
+}
+
+.lang-form {
+    flex: 1;
+}
+
+.langheader {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Lobster';
+    color: #ff6b01;
+    width: 100%;
+    /* letter-spacing: 5px; */
+}
+
+.outlinklang {
+    /* margin: 15px; */
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 3px 0px rgb(97, 97, 97);
+    min-height: 55px;
+    width: 630px;
+    /* margin-left: 200px; */
+    margin: 20px auto;
+
+}
+
+.deletelang {
+    display: inline-block;
+    width: 40px;
+    /* padding: 15px 15px; */
+    /* margin: auto; */
+    height: 40px;
+    /* margin-top: 13px; */
+    margin-left: 5px;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 20px;
+    color: red;
+    background-color: rgb(255, 239, 239);
+    cursor: pointer;
+}

@@ -11,8 +11,8 @@ input {
     font-family: 'Ubuntu', sans-serif;
     width: 300px;
 }
-.personalmain
-{
+
+.personalmain {
     width: 500px;
 }
 
@@ -85,6 +85,13 @@ label {
 
 }
 
+.formcont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
 .link {
 
     /* margin: 30px; */
@@ -148,8 +155,9 @@ label {
 
 
 
-.outlink {
-    margin: 15px;
+.outlink1 {
+
+    /* margin: 15px; */
     border-radius: 30px;
     padding: 10px;
     display: flex;
@@ -157,6 +165,9 @@ label {
     background-color: #ffffff;
     box-shadow: 0px 3px 3px 0px rgb(97, 97, 97);
     min-height: 55px;
+    width: 630px;
+    /* margin-left: 200px; */
+    margin: 20px auto;
 
 }
 
@@ -219,10 +230,42 @@ label {
     font-weight: bold;
     color: aliceblue;
     text-align: left;
+
 }
 
 .save:hover {
     background-color: #3907ef;
     /* color: #3907ef;
     outline: 1px solid #3907ef; */
+}
+
+.delete {
+    display: inline-block;
+    width: 40px;
+    /* padding: 15px 15px; */
+    /* margin: auto; */
+    height: 40px;
+    margin-top: 13px;
+    margin-left: 5px;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 20px;
+    color: red;
+    background-color: rgb(255, 239, 239);
+    cursor: pointer;
+    /* margin: auto; */
+}
+
+.delete:hover {
+    transform: scale(1.1);
+}
+
+.newone {
+    display: inline-block;
+}
+
+.main-new-feild {
+    display: flex;
+    flex-direction: row;
+
 }

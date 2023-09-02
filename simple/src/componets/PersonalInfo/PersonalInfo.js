@@ -10,16 +10,37 @@ const PersonalInfo = ({ title, part, setpart, section, setSection }) => {
 
     const [links, setLinks] = useState([]);
     const [add, setadd] = useState(false);
-    const [newtitles, setnewTitles] = useState([]);
+    // const [newtitles, setnewTitles] = useState([]);
+
     const [onetitle, setoneTitle] = useState('')
-    const [url,setUrl] =useState('');
+    const [url, setUrl] = useState('');
 
     const addlink = () => {
-        setnewTitles([...newtitles, onetitle]);
-        console.log(newtitles)
+        // setnewTitles([...newtitles, onetitle]);
+        // console.log(newtitles)
+        setadd(false);
+        const obj = {
+            title: onetitle,
+            url: url
+        }
+
+        setLinks([...links, obj]);
+        setUrl('');
         setoneTitle('');
-        setadd(false);        
+        // console.log(links);
+        setpart({ ...part, Links: links });
     };
+
+    const deleteone = (ind) => {
+
+        const arr = links.filter((ele, i) => {
+            if (ind !== i) {
+                return ele;
+
+            }
+        });
+        setLinks(arr);
+    }
 
 
     return (
@@ -59,45 +80,49 @@ const PersonalInfo = ({ title, part, setpart, section, setSection }) => {
 
                             </div>
 
-                            {newtitles.map((ele) => {
+                            {links.map((ele, ind) => {
                                 return (
 
                                     <div className="card">
 
-                                        <label className="name" >{ele} <span style={{ fontSize: 13, color: 'blue', opacity: 0.3 }}>OPTIONAL  </span> </label>
-                                        <input type="url" placeholder="please enter a link ....." required onChange={(token) => 
-                                         {
-                                            setLinks([...links, {title:ele,url:token.target.value}]);
-                                            console.log(links);
-                                        setpart({ ...part, Links: [...links, {title:ele,url:token.target.value}] });}
-                                        } />
+                                        <label className="name" >{ele.title} <span style={{ fontSize: 13, color: 'blue', opacity: 0.3 }}>OPTIONAL  </span> </label>
+                                        <div className="main-new-feild" >
+                                            <input type="url" value={ele.url} disabled className="newone" />
+
+                                            <button className="delete" onClick={() => { deleteone(ind) }}>X</button></div>
                                     </div>
                                 )
-                            } )}
+                            })}
+                        </div>
+
+
+
+
+
+                        <div className="outlink1">
+                            <div className="link" >
+                                <h3> Add Social-Media Links</h3>
+
+                                <div className="add" onClick={() => setadd(true)}>+</div>
+
+                            </div>
+                            {(add && (<div className="newlink" >
+
+                                <label className="name" >Enter Title  </label>
+                                <input className="inputnewlink" type="text" placeholder="please enter a title of link" required onChange={(token) => setoneTitle(token.target.value)} />
+                                <label className="name" >Enter URL  </label>
+                                <input className="inputnewlink" type="text" placeholder="please enter a title of link" required onChange={(token) => setUrl(token.target.value)} />
+                                <div className="buttons">
+                                    <div className="cancel" onClick={() => setadd(false)}>cancel</div>
+                                    <div className="save" onClick={addlink}>save</div>
+                                </div>
+                            </div>)
+
+                            )}
                         </div>
                     </form>
-                                      
 
-                    <div className="outlink">
-                        <div className="link" >
-                            <h3> Add Social-Media Links</h3>
-
-                            <div className="add" onClick={() => setadd(true)}>+</div>
-
-                        </div>
-                        {(add && (<div className="newlink" >
-
-                            <label className="name" >Enter Title  </label>
-                            <input className="inputnewlink" type="text" placeholder="please enter a title of link" required onChange={(token) => setoneTitle(token.target.value)} />
-                            <div className="buttons">
-                                <div className="cancel" onClick={() => setadd(false)}>cancel</div>
-                                <div className="save" onClick={addlink}>save</div>
-                            </div>
-                        </div>)
-
-                        )}
-                    </div>
-                    <Buttons section={section} setSection={setSection} part={part} setpart={setpart}/>
+                    <Buttons section={section} setSection={setSection} part={part} setpart={setpart} />
 
                 </div>
             </div>

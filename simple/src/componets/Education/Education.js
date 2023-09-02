@@ -16,11 +16,19 @@ const Education = ({ title, part, setpart, section, setSection }) => {
 
     const addaward = () => {
         const obj = { header: header, organization: organization };
-        setawards([...awards, obj]);        
-        setpart({...part,honors:[...awards, obj]});
+        setawards([...awards, obj]);
+        setpart({ ...part, honors: awards });
         setheader('');
         setorganization('');
         setadd(false);
+
+    }
+    const deleteone = (ind) => {
+        const arr = awards.filter((ele, i) => {
+            if (ind !== i)
+                return ele;
+        });
+        setawards(arr);
 
     }
 
@@ -48,7 +56,7 @@ const Education = ({ title, part, setpart, section, setSection }) => {
                             <input type="text" placeholder=" enter " required onChange={(token) => setpart({ ...part, educationalinstitutions: token.target.value })} />
 
                         </div>
-                        
+
                         <div className="card">
 
                             <label className="name" >Graduation dates </label>
@@ -59,12 +67,14 @@ const Education = ({ title, part, setpart, section, setSection }) => {
 
                     </form>
                     <div className="award">
-                        {awards.map((ele) => {
+                        {awards.map((ele, ind) => {
                             return (
                                 <div className="awarditem">
-                                    <div className="n1">{ele.header}</div>
-                                    <div className="n2">{ele.organization}</div>
-
+                                    <div>
+                                        <div className="n1">{ele.header}</div>
+                                        <div className="n2">{ele.organization}</div>
+                                    </div>
+                                    <button className="delete-award" onClick={() => { deleteone(ind) }}>X</button>
                                 </div>
                             )
                         })}
@@ -96,10 +106,10 @@ const Education = ({ title, part, setpart, section, setSection }) => {
                         )}
                     </div>
                 </div>
-                <Buttons section={section} setSection={setSection} part={part} setpart={setpart}/>
+                <Buttons section={section} setSection={setSection} part={part} setpart={setpart} />
             </div>
             <img src={grad} height="400" width="300"></img>
-        </div>
+        </div >
 
 
     )
