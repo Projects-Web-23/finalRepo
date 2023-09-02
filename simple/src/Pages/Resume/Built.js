@@ -1,8 +1,7 @@
 import React,{useState, useEffect, useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import './BuiltResume.css';
-import data from '../../ThisDataResume2.json';
-
+import data from './Final.json'
 {/*const doc = new jsPDF({
 	orientation: 'p',
 	unit: 'in',
@@ -14,7 +13,6 @@ doc.html(BuiltResume, {
 	},
 });*/}
 
-
 const BuiltResume =()=>
 {
     const [Name,setName]=useState();
@@ -24,31 +22,33 @@ const BuiltResume =()=>
     const [Summary,setSummary]=useState(" ");
     const [Edu,setEdu]=useState([]);
     const [work,setWork]=useState([]);
-    const [Soft,setSoft]=useState([]);
-    const [Tech,setTech]=useState([]);
+    const [Skills,setSkills]=useState([]);
     const [Cert,setCert]=useState([]);
     const [Proj,setProject]=useState([]);
     const [Lang,setLang]=useState([]);
     const [Hobbies,setHobbies]=useState([]);
+    const [Honors,setHonors]=useState([]);
+    const[Links, setLinks]=useState([]);
 
     useEffect(() => {
         const fetchData = async()=>
         {
             try
             {
-                setName(data.Name);
+                setName(data.FullName);
                 setEmail(data.Email);
                 setAddress(data.Address);
                 setPhone(data.Phone);
-                setSummary(data.ProfessionalSummary);
+                setLinks(data.Links);
+                setSummary(data.Summary);
                 setWork(data.WorkExperience);
                 setEdu(data.Education);
-                setSoft(data.SoftSkills);
-                setTech(data.TechnicalSkills);
-                setCert(data.Certifications);
-                setProject(data.Project);
+                setSkills(data.Skills);
+                setCert(data.Certificates);
+                setProject(data.Projects);
                 setLang(data.Languages);
                 setHobbies(data.Hobbies);
+                setHonors(data.honors);
 
             }
             catch(error)
@@ -89,17 +89,14 @@ const BuiltResume =()=>
             {Edu.map((element)=>{return(
                 <>
                 <h3>
-                {element.Degree}&nbsp; 
+                {element.Degreesearned} of {element.fieldofstudy}&nbsp;  
                 </h3>
                 <h3 id='two'>
-                    at {element.Name}
+                    at {element.educationalinstitutions}
                 </h3>
                 <h5>
-                {element.StartDate} - {element.EndDate}
+                Graduation: {element.Graduationdates}
                 </h5>
-                <h4>
-                Cumulative GPA: {element.GPA}
-                </h4>
                 </>);
             })}
             </div>
@@ -111,16 +108,16 @@ const BuiltResume =()=>
             {work.map((element)=>{return(
                 <>
                 <h3>
-                {element.Position}&nbsp; 
+                {element.title}&nbsp; 
                 </h3>
                 <h3 id='two'>
-                    at {element.Name}
+                    at {element.company}
                 </h3>
                 <h5>
-                {element.StartDate} - {element.EndDate}
+                {element.Start} - {element.End}
                 </h5>
                 <h4>
-                {element.Description}
+                {element.briefdescription}
                 </h4>
                 </>);
             })}
@@ -133,37 +130,33 @@ const BuiltResume =()=>
                 {Proj.map((element)=>{return(
                 <>
                 <h3>
-                {element.Name}&nbsp; 
+                {element.title}&nbsp; 
                 </h3>
-                <h5>
-                {element.Award}
-                </h5>
+                <h4 style={{display:'inline'}}>
+                from&nbsp; 
+                </h4>
+                <h4 id="two" style={{display:'inline', fontWeight:700}}>
+                {element.start_date}&nbsp; 
+                </h4>
+                <h4 style={{display:'inline'}}>
+                to&nbsp; 
+                </h4>
+                <h4 id="two" style={{display:'inline', fontWeight:700}}>
+                {element.end_date}
+                </h4>
                 <h4>
-                {element.Description}
+                {element.briefdescription}
                 </h4>
                 </>);
             })}
             </div>
             </div>
             <div class="side">
-            <div className="soft">
+            <div className="Skills">
                 <h2>
-                    Soft Skills:
+                    Skills:
                 </h2>
-                {Soft.map((element)=>{return(
-                    <>
-                    <h4 className='bullet'>
-                    &#x2022; {element}
-                    </h4>
-                    </>);
-                })}
-            </div>
-            <hr/>
-            <div className="technical">
-                <h2>
-                    Tech Skills:
-                </h2>
-                {Tech.map((element)=>{return(
+                {Skills.map((element)=>{return(
                     <>
                     <h4 className='bullet'>
                     &#x2022; {element}
@@ -174,7 +167,7 @@ const BuiltResume =()=>
             <hr/>
             <div className="Languages">
                 <h2>
-                    Tech Skills:
+                    Languages:
                 </h2>
                 {Lang.map((element)=>{return(
                     <>
@@ -191,8 +184,26 @@ const BuiltResume =()=>
                 </h2>
                 {Cert.map((element)=>{return(
                     <>
-                    <h4 className='bullet'>
-                    &#x2022; {element}
+                    <a href={element.link}>&#x2022; {element.title}</a>
+                    <h4 id="two" style={{display:'inline'}}>
+                    - {element.cert_date}
+                    </h4>
+                    <h4>
+                    &nbsp; {element.description} <br/>
+                    </h4>
+                    </>);
+                })}
+            </div>
+            <hr/>
+            <div className="Certificates">
+                <h2>
+                    Honors:
+                </h2>
+                {Honors.map((element)=>{return(
+                    <>
+                    <h5 href={element.link}>&#x2022; {element.header}</h5>
+                    <h4>
+                    &nbsp; {element.organization} <br/>
                     </h4>
                     </>);
                 })}
