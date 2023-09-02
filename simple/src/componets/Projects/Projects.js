@@ -3,13 +3,13 @@ import Buttons from '../Buttons/Buttons'
 import './Projects.css'
 const Project = ({ title, part, setpart, section, setSection }) => {
 
-    const [experiances, setExperiances] = useState([]);
+    const [Projects, setProjects] = useState([]);
 
     const [add, setadd] = useState(false);//button
-    const [projecttitle, setprojecttitle] = useState('');//title    
+    const [projecttitle, setprojecttitle] = useState('');//title
     const [sdate, setsdate] = useState(''); //date
-    const [edate, setedate] = useState(''); 
-    const [collaborator, setcollaborator] = useState('');//collaboraters   
+    const [edate, setedate] = useState('');
+    const [collaborator, setcollaborator] = useState('');//collaboraters
     const [briefdescription, setbriefdescription] = useState('');//description
 
 
@@ -17,18 +17,29 @@ const Project = ({ title, part, setpart, section, setSection }) => {
     const addexperiance = () => {
         setadd(false);
         const ex = {
-            title: projecttitle,           
+            title: projecttitle,
             start_date: sdate,
             end_date:edate,
-            collaborator: collaborator,           
+            collaborator: collaborator,
             briefdescription: briefdescription,
 
         };
-        setExperiances([...experiances, ex]);
-        setpart({...part, Projects:[...experiances, ex]});
+        setProjects([...Projects, ex]);
+        setpart({...part, Projects:Projects});
 
 
     }
+    const deleteone = (ind) => {
+
+        const arr = Projects.filter((ele, i) => {
+            if (ind !== i) {
+                return ele;
+
+            }
+        });
+        setProjects(arr);
+    }
+
 
 
 
@@ -38,19 +49,19 @@ const Project = ({ title, part, setpart, section, setSection }) => {
                 <h1 className="workheader"  >{title}</h1>
                 <div className="left" >
                     <form className="formjob">
-                        {experiances.map((ele) => {
+                        {Projects.map((ele,ind) => {
                             return (
 
                                 <div className="cardwork">
-                                    <div className="jobhead">
+                                    <div className="prohead">
                                         {ele.title}
 
                                     </div>
-                                    <div className="jobhead">
+                                    <div className="procoll">
                                         {ele.collaborator}
 
                                     </div>
-                                    
+
                                     <div className="jobdate">
                                         {ele.start_date}
 
@@ -59,12 +70,14 @@ const Project = ({ title, part, setpart, section, setSection }) => {
                                         {ele.end_date}
 
                                     </div>
-                                    
-                                    
+
+
                                     <div className="summery">
                                         {ele.briefdescription}
 
                                     </div>
+                                    <button className="deleteproject" onClick={() => { deleteone(ind) }}>X</button>
+
                                 </div>
                             )
                         })}
@@ -82,7 +95,7 @@ const Project = ({ title, part, setpart, section, setSection }) => {
                                         <div className="card">
                                             <label className="name" > Project Title  </label>
                                             <input className="feild" type="text" placeholder="please enter a project name..... " onChange={(token) =>  setprojecttitle(token.target.value)} />
-                                        </div>                                       
+                                        </div>
                                         <div className="card">
                                             <label className="name" > Colaborator </label>
                                             <input className="feild" type="text" placeholder="please enter a  colaborator ..... " onChange={(token) => setcollaborator(token.target.value)} />
@@ -97,8 +110,8 @@ const Project = ({ title, part, setpart, section, setSection }) => {
                                         </div>
 
                                     </div>
-                                    
-                                   
+
+
 
 
 

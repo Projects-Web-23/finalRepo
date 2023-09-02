@@ -170,5 +170,29 @@
     /* padding: 20px; */
     text-align: start;
     margin: 20px;
+    position: relative;
 
+}
+
+.deleteexperiance {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    /* padding: 15px 15px; */
+    /* margin: auto; */
+    height: 40px;
+    margin-top: 13px;
+    margin-left: 5px;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 20px;
+    color: red;
+    background-color: rgb(255, 239, 239);
+    cursor: pointer;
+    left: 800px;
+    top: 10px
+}
+
+.deleteexperiance:hover {
+    transform: scale(1.1);
 }
