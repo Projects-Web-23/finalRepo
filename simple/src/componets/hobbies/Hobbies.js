@@ -24,6 +24,7 @@ const Hobbies = ({ title, section, setSection, part, setpart,Hobbys }) => {
             }
         });
         setHobbies(arr);
+        setpart({ ...part, Hobbies: arr });
     }
 
 

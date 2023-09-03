@@ -21,6 +21,7 @@ const Skills = ({ title, section, setSection, part, setpart,Skills }) => {
                 return ele;
         });
         setSkills(arr);
+        setpart({ ...part, Skills: arr });
     }
 
     return (

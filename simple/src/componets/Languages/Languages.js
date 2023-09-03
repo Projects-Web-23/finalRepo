@@ -23,6 +23,7 @@ const Languages = ({ title, section, setSection, part, setpart,Languages_val }) 
             }
         });
         setLanguage(arr);
+        setpart({ ...part, Languages:arr });
     }
 
 

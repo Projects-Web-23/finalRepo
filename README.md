@@ -38,13 +38,13 @@ To run the Resume Builder App locally on your machine, follow these steps:
 
    ```bash
    git clone https://github.com/your-username/simple.git
-3. Install the dependencies:
+3. Install the dependencies(in simple& in Server):
       ```bash
    npm install
       
 ## Usage
 
-1. Start the development server:
+1. Start the development server(in simple& in Server):
 
    ```bash
    npm start
@@ -61,15 +61,15 @@ Here are some screenshots showcasing the Resume Builder App's user interface and
 
 **Home Page**
 
-![Home Page](screenshots/home-page.png)
+![Home Page](screenshots/home-page.JPG)
 _The home page of the Resume Builder App._
 
 **Resume Builder**
 
-![Resume Builder](screenshots/resume-builder.png)
+![Resume Builder](screenshots/resume-builder.JPG)
 _The resume builder interface where users can enter their information._
 
 **Generated Resume**
 
-![Generated Resume](screenshots/generated-resume.png)
+![Generated Resume](screenshots/resume-example.JPG)
 _An example of a generated resume based on user input._

@@ -42,6 +42,7 @@ FullName,Email,Address,Phone,Links
             }
         });
         setLinks(arr);
+        setpart({ ...part, Links: arr });
     }
 
 
