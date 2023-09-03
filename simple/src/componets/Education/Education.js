@@ -36,6 +36,7 @@ const Education = ({ title, part, setpart, section, setSection,
                 return ele;
         });
         setawards(arr);
+        setpart({ ...part, honors: arr });
 
     }
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Buttons from '../Buttons/Buttons'
 import './Certification.css'
 
-const Certificate = ({ title, part, setpart, section, setSection,Certificates }) => {
+const Certificate = ({ title, part, setpart, section, setSection, Certificates }) => {
 
     const [certificates, setCertificates] = useState(Certificates);
 
@@ -38,6 +38,7 @@ const Certificate = ({ title, part, setpart, section, setSection,Certificates })
             }
         });
         setCertificates(arr);
+        setpart({ ...part, Certificates: arr });
     }
 
 

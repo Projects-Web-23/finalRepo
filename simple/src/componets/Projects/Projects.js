@@ -26,7 +26,7 @@ const Project = ({ title, part, setpart, section, setSection,Projects_val }) => 
         };
         setProjects([...Projects, ex]);
         setpart({...part, Projects: [...Projects, ex]});
-        
+
 
 
     }
@@ -39,6 +39,7 @@ const Project = ({ title, part, setpart, section, setSection,Projects_val }) => 
             }
         });
         setProjects(arr);
+        setpart({...part, Projects:arr});
     }
 
 
