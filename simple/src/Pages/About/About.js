@@ -27,21 +27,21 @@ const About = () => {
             <h1>How to use <span>Resumeness</span></h1>
             <div className="how-to">
                 <div className="how-item">
-                    <img src={resIcon} alt="resume"/>
+                    <img src={resIcon} alt="resume"className="s"/>
                     <h2>Go to resume page</h2>
                 </div>
                 <div className="arrow">
                  <img src={arrowIcon} alt="arrow" />
                  </div>
                 <div className="how-item">
-                    <img src={formIcon} alt="form"/>
+                    <img src={formIcon} alt="form"className="s"/>
                     <h2>Fill in your Information</h2>
                 </div>
                 <div className="arrow">
                 <img src={arrowIcon} alt="arrow" />
                 </div>
                 <div className="how-item">
-                    <img src={downloadIcon} alt="download"/>
+                    <img src={downloadIcon} alt="download" className="s"/>
                     <h2>Download PDF</h2>
                 </div>
 

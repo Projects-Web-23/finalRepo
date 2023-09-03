@@ -16,7 +16,9 @@
     text-align: left;
     border: 0px;
 }
-
+.side{
+    width:300px ;
+}
 h1{
     font-size: 20px;
 }

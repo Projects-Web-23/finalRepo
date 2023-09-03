@@ -172,6 +172,23 @@ const BuiltResume = () => {
                 </div>
             </div>
            <div class="side">
+           <div className="Links">
+                    <h2>
+                        Links:
+                    </h2>
+                    {Links.map((element) => {
+                        return (
+                            <>
+                                <h4 >
+                                    &#x2022; {element.title}
+                                </h4>
+                                <h5 className='bullet'>
+                                    &#x2022; {element.url}
+                                </h5>
+                            </>);
+                    })}
+                </div>
+                <hr />
                 <div className="Skills">
                     <h2>
                         Skills:
