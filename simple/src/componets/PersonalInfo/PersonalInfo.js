@@ -30,7 +30,7 @@ FullName,Email,Address,Phone,Links
         setUrl('');
         setoneTitle('');
         // console.log(links);
-        setpart({ ...part, Links: links });
+        setpart({ ...part, Links: [...links,obj] });
     };
 
     const deleteone = (ind) => {
