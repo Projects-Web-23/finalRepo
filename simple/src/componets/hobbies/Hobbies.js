@@ -3,8 +3,8 @@ import Buttons from '../Buttons/Buttons';
 import './Hobbies.css'
 import ski from '../../Photos/Skills.png'
 
-const Hobbies = ({ title, section, setSection, part, setpart }) => {
-    const [hobbies, setHobbies] = useState([]);
+const Hobbies = ({ title, section, setSection, part, setpart,Hobbys }) => {
+    const [hobbies, setHobbies] = useState(Hobbys);
     const [newHobby, setNewHobby] = useState('');
 
     const [add, setadd] = useState(false);

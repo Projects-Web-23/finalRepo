@@ -35,6 +35,8 @@ const Resume = () => {
         fieldofstudy: '',
         honors: [],
 
+        Languages:[],
+
         Skills:[],//sec6
         Projects:[],//sec7
         Certificates:[], //sec8
@@ -48,28 +50,60 @@ const Resume = () => {
     let whichTorender = () =>  //Handle what to apper
     {
         if (section === 0)
-            return <PersonalInfo title={sections[0]} part={resume} setpart={setResume} section={section} setSection={setSection} />
+            return <PersonalInfo title={sections[0]} part={resume} setpart={setResume} 
+            section={section} setSection={setSection}
+            FullName={resume.FullName} Address={resume.Address} 
+            Email={resume.Email} Phone={resume.Phone} Links={resume.Links}
+            />
         else if (section === 1)
-            return <ProfessionalSummary title={sections[1]} part={resume} setpart={setResume} section={section} setSection={setSection} />
+            return <ProfessionalSummary title={sections[1]} 
+            part={resume} setpart={setResume} 
+            section={section} setSection={setSection}
+            Summary={resume.Summary} />
 
         else if (section === 2)
-            return <Work title={sections[2]} part={resume} setpart={setResume} section={section} setSection={setSection} />
+            return <Work title={sections[2]} 
+            part={resume} setpart={setResume} 
+            section={section} setSection={setSection}
+            WorkExperience={resume.WorkExperience} />
         else if (section === 3)
-            return <Education title={sections[3]} part={resume} setpart={setResume} section={section} setSection={setSection} />
+            return <Education title={sections[3]} 
+            part={resume} setpart={setResume} 
+            section={section} setSection={setSection}
+            educationalinstitutions={resume.educationalinstitutions}
+            Degreesearned={resume.Degreesearned}
+            fieldofstudy={resume.fieldofstudy}
+            honors={resume.honors}
+            Graduationdates={resume.Graduationdates}
+            
+            />
         else if (section === 4)
-            return <Skills title={sections[4]} part={resume} setpart={setResume} section={section} setSection={setSection} />
+            return <Skills title={sections[4]} 
+            part={resume} setpart={setResume} 
+            section={section} setSection={setSection}
+            Skills={resume.Skills}
+             />
         else if (section === 5)
-            return <Project title={sections[5]} part={resume} setpart={setResume} section={section} setSection={setSection} />
+            return <Project title={sections[5]} 
+            part={resume} setpart={setResume} 
+            section={section} setSection={setSection} 
+            Projects_val={resume.Projects} />
         else if (section === 6)
-            return <Languages title={sections[6]} part={resume} setpart={setResume} section={section} setSection={setSection} />
+            return <Languages title={sections[6]} part={resume} setpart={setResume} 
+            section={section} setSection={setSection}
+            Languages_val={resume.Languages} />
         else if (section === 7)
-            return <Certificate title={sections[7]} part={resume} setpart={setResume} section={section} setSection={setSection} />
+            return <Certificate title={sections[7]} part={resume} setpart={setResume}
+             section={section} setSection={setSection}
+             Certificates={resume.Certificates} />
 
         else
-            return <Hobbies title={sections[8]} part={resume} setpart={setResume} section={section} setSection={setSection} />
+            return <Hobbies title={sections[8]} part={resume} setpart={setResume} 
+            section={section} setSection={setSection}
+            Hobbys={resume.Hobbies} />
 
     }
-
+    console.log(resume.Projects,"resume")
 
     return (
         <div>

@@ -2,9 +2,9 @@ import { useState } from "react";
 import Buttons from '../Buttons/Buttons'
 import './Certification.css'
 
-const Certificate = ({ title, part, setpart, section, setSection }) => {
+const Certificate = ({ title, part, setpart, section, setSection,Certificates }) => {
 
-    const [certificates, setCertificates] = useState([]);
+    const [certificates, setCertificates] = useState(Certificates);
 
     const [add, setadd] = useState(false);//button
     const [certTitle, setCertTitle] = useState('');//title

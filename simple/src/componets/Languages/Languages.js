@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Buttons from '../Buttons/Buttons';
 import lang from '../../Photos/lang.png'
 import './languages.css'
-const Skills = ({ title, section, setSection, part, setpart }) => {
-    const [language, setLanguage] = useState([]);
+const Languages = ({ title, section, setSection, part, setpart,Languages_val }) => {
+    const [language, setLanguage] = useState(Languages_val);
     const [newlanguage, setNewlanguage] = useState('');
 
     const [add, setadd] = useState(false);
@@ -74,4 +74,4 @@ const Skills = ({ title, section, setSection, part, setpart }) => {
 }
 
 
-export default Skills;
+export default Languages;

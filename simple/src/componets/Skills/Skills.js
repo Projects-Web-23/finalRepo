@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Buttons from '../Buttons/Buttons';
 import ski from '../../Photos/Skills.png'
 import './Skills.css'
-const Skills = ({ title, section, setSection, part, setpart }) => {
-    const [skills, setSkills] = useState([]);
+const Skills = ({ title, section, setSection, part, setpart,Skills }) => {
+    const [skills, setSkills] = useState(Skills);
     const [newSkill, setNewSkill] = useState('');
 
     const [add, setadd] = useState(false);

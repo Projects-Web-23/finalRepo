@@ -3,7 +3,7 @@ import summ from '../../Photos/summary.png'
 import '../../App.css'
 import Buttons from '../Buttons/Buttons'
 import './ProfessionalSummar.css'
-const ProfessionalSummary = ({ title, part, setpart, section, setSection }) => {
+const ProfessionalSummary = ({ title, part, setpart, section, setSection,Summary }) => {
     return (
         <div className="professionalSum" >
             <div className="sqaure" >
@@ -11,7 +11,7 @@ const ProfessionalSummary = ({ title, part, setpart, section, setSection }) => {
                 <div className="left" >
                     <form>
                         <label className="namesumm">Summary about You  </label> <br />
-                        <textarea type="text" className="n" style={inputf} required onChange={(token) => setpart({ ...part, Summary: token.target.value })}></textarea>
+                        <textarea type="text" value={Summary} className="n" style={inputf} required onChange={(token) => setpart({ ...part, Summary: token.target.value })}></textarea>
                         <div style={{ display: "flex", flexDirection: 'column' }}>
                 <div className="detail">
                     <div className="head">How to summarize yourself</div>

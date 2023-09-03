@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Buttons from '../Buttons/Buttons'
 import './Projects.css'
-const Project = ({ title, part, setpart, section, setSection }) => {
+const Project = ({ title, part, setpart, section, setSection,Projects_val }) => {
 
-    const [Projects, setProjects] = useState([]);
+    const [Projects, setProjects] = useState(Projects_val);
 
     const [add, setadd] = useState(false);//button
     const [projecttitle, setprojecttitle] = useState('');//title
@@ -25,7 +25,8 @@ const Project = ({ title, part, setpart, section, setSection }) => {
 
         };
         setProjects([...Projects, ex]);
-        setpart({...part, Projects:Projects});
+        setpart({...part, Projects: [...Projects, ex]});
+        
 
 
     }

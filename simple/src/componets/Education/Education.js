@@ -2,10 +2,17 @@ import { useState } from "react";
 import grad from '../../Photos/grad.png'
 import Buttons from '../Buttons/Buttons'
 import './Education.css'
-const Education = ({ title, part, setpart, section, setSection }) => {
+const Education = ({ title, part, setpart, section, setSection,
+    fieldofstudy,
+    educationalinstitutions,
+    honors,
+    Graduationdates,
+    Degreesearned
+
+}) => {
 
     const [add, setadd] = useState(false);
-    const [awards, setawards] = useState([]);
+    const [awards, setawards] = useState(honors);
     // const [award, setaward] = useState({
     //     header: '',
     //     organization:'',
@@ -17,7 +24,7 @@ const Education = ({ title, part, setpart, section, setSection }) => {
     const addaward = () => {
         const obj = { header: header, organization: organization };
         setawards([...awards, obj]);
-        setpart({ ...part, honors: awards });
+        setpart({ ...part, honors: [...awards,obj] });
         setheader('');
         setorganization('');
         setadd(false);
@@ -41,26 +48,26 @@ const Education = ({ title, part, setpart, section, setSection }) => {
                         <div className="card">
 
                             <label className="name" >Degrees earned  </label>
-                            <input type="text" placeholder=" enter......" required onChange={(token) => setpart({ ...part, Degreesearned: token.target.value })} />
+                            <input type="text" value={Degreesearned} placeholder=" enter......" required onChange={(token) => setpart({ ...part, Degreesearned: token.target.value })} />
 
                         </div>
                         <div className="card">
 
                             <label className="name" >field of study  </label>
-                            <input type="text" placeholder=" enter......" required onChange={(token) => setpart({ ...part, fieldofstudy: token.target.value })} />
+                            <input type="text" value={fieldofstudy} placeholder=" enter......" required onChange={(token) => setpart({ ...part, fieldofstudy: token.target.value })} />
 
                         </div>
                         <div className="card">
 
                             <label className="name" >educational institutions  </label>
-                            <input type="text" placeholder=" enter " required onChange={(token) => setpart({ ...part, educationalinstitutions: token.target.value })} />
+                            <input type="text" value={educationalinstitutions} placeholder=" enter " required onChange={(token) => setpart({ ...part, educationalinstitutions: token.target.value })} />
 
                         </div>
 
                         <div className="card">
 
                             <label className="name" >Graduation dates </label>
-                            <input type="date" placeholder="please enter your name......" required onChange={(token) => setpart({ ...part, Graduationdates: token.target.value })} />
+                            <input type="date" value={Graduationdates} placeholder="please enter your name......" required onChange={(token) => setpart({ ...part, Graduationdates: token.target.value })} />
 
                         </div>
 

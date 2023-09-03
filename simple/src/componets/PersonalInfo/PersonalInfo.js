@@ -6,9 +6,11 @@ import Buttons from '../Buttons/Buttons'
 // import funcLink from "./Funclink";
 
 
-const PersonalInfo = ({ title, part, setpart, section, setSection }) => {
+const PersonalInfo = ({ title, part, setpart, section, setSection ,
+FullName,Email,Address,Phone,Links
+}) => {
 
-    const [links, setLinks] = useState([]);
+    const [links, setLinks] = useState(Links);
     const [add, setadd] = useState(false);
     // const [newtitles, setnewTitles] = useState([]);
 
@@ -54,14 +56,14 @@ const PersonalInfo = ({ title, part, setpart, section, setSection }) => {
                             <div className="card">
 
                                 <label className="name" >Full Name  </label>
-                                <input type="text" placeholder="please enter your name......" required onChange={(token) => setpart({ ...part, FullName: token.target.value })} />
+                                <input type="text" value={FullName} placeholder="please enter your name......" required onChange={(token) => setpart({ ...part, FullName: token.target.value })} />
 
                             </div>
 
                             <div className="card">
 
                                 <label className="name">Email <span style={{ fontSize: 13, color: 'blue', opacity: 0.3 }}>RECOMMENDED</span> </label>
-                                <input type="email" placeholder="please enter your mail ....." optinal onChange={(token) => setpart({ ...part, Email: token.target.value })} />
+                                <input type="email" value={Email} placeholder="please enter your mail ....." optinal onChange={(token) => setpart({ ...part, Email: token.target.value })} />
 
                             </div>
 
@@ -70,13 +72,13 @@ const PersonalInfo = ({ title, part, setpart, section, setSection }) => {
                             <div className="card">
 
                                 <label className="name" >phone  <span style={{ fontSize: 13, color: 'blue', opacity: 0.3 }}>RECOMMENDED</span></label>
-                                <input type="number" placeholder="please enter your home phone ....." required onChange={(token) => setpart({ ...part, Phone: token.target.value })} />
+                                <input type="number" value={Phone} placeholder="please enter your home phone ....." required onChange={(token) => setpart({ ...part, Phone: token.target.value })} />
 
                             </div>
                             <div className="card" >
 
                                 <label className="name" >Address <span style={{ fontSize: 13, color: 'blue', opacity: 0.3 }}>RECOMMENDED  </span> </label>
-                                <input type="text" placeholder="please enter your address ......" required onChange={(token) => setpart({ ...part, Address: token.target.value })} />
+                                <input type="text" value={Address} placeholder="please enter your address ......" required onChange={(token) => setpart({ ...part, Address: token.target.value })} />
 
                             </div>
 

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Buttons from '../Buttons/Buttons'
 import './WorkExperience.css'
-const Work = ({ title, part, setpart, section, setSection }) => {
+const Work = ({ title, part, setpart, section, setSection,WorkExperience }) => {
 
-    const [experiances, setExperiances] = useState([]);
+    const [experiances, setExperiances] = useState(WorkExperience);
+    console.log("work ex",WorkExperience)
 
     const [add, setadd] = useState(false);
     const [jobtitle, setjobtitle] = useState("");
@@ -31,7 +32,7 @@ const Work = ({ title, part, setpart, section, setSection }) => {
         setsdate('');
         setedate('');
         setbriefdescription('');
-        setpart({ ...part, WorkExperience: experiances });
+        setpart({ ...part, WorkExperience: [...experiances, ex] });
         // console.log(experiances)
 
     }
