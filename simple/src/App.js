@@ -7,6 +7,7 @@ import About from './Pages/About/About';
 import Resume from './Pages/Resume/Resume';
 import Login from '../src/componets/Login/Login';
 import PrintPdf from './Pages/Resume/Built';
+import Profile from './Pages/Profile/Profile';
 
 
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/About"><About /></Route>
             <Route path="/Login"><Login /></Route>
             <Route path="/Built"><PrintPdf /></Route>
+            <Route path="/Profile"><Profile/></Route>
 
           </Switch>
         </div>

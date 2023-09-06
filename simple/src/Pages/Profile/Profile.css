@@ -1,0 +1,23 @@
+.main-Profile-Con {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-Profile {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-Profile {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px 10px;
+}
+
+.Header-Profile {
+    font-size: 30px;
+    font-family: 'montserrat';
+    font-style: italic;
+    font-weight: bold;
+    color: blue;
+}

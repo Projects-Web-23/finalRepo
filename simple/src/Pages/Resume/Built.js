@@ -29,7 +29,7 @@ const BuiltResume = () => {
     const [Hobbies, setHobbies] = useState([]);
     const [Honors, setHonors] = useState([]);
     const [Links, setLinks] = useState([]);
-   
+
     const [Degreesearned, setDegreesearned] = useState('');
     const [educationalinstitutions, seteducationalinstitutions] = useState('');
     const [fieldofstudy, setfieldofstudy] = useState('');
@@ -47,7 +47,7 @@ const BuiltResume = () => {
             })
             console.log(response.data);
             let ob = response.data;
-            
+
 
             setName(ob.FullName);
             setEmail(ob.Email);
@@ -104,7 +104,7 @@ const BuiltResume = () => {
                     <h2>
                         Education:
                     </h2>
-                    
+
                     <>
                         <h3>
                             {Degreesearned} of {fieldofstudy}&nbsp;
@@ -115,10 +115,10 @@ const BuiltResume = () => {
                         <h5>
                             Graduation: {Graduationdates}
                         </h5>
-                        </>                               
+                        </>
                 </div>
                 <hr />
-                
+
                 <div className="work">
                     <h2>
                         Work Experience:
