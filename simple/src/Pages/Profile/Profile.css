@@ -6,6 +6,8 @@
 .form-Profile {
     display: flex;
     flex-direction: row;
+    /* width: 80%; */
+    /* margin: auto; */
 }
 
 .grid-Profile {
@@ -15,9 +17,32 @@
 }
 
 .Header-Profile {
-    font-size: 30px;
-    font-family: 'montserrat';
+    font-size: 35px;
+    font-family: 'Permanent_Marker';
     font-style: italic;
     font-weight: bold;
     color: blue;
+    margin: 30px;
+
+    /* border-bottom: 2px solid blue; */
+    /* width: fit-content; */
+
+
+}
+
+.img-Profile {
+
+    flex: 1;
+    /* position: relative;
+    width: 200px; */
+
+}
+
+.data-Profile {
+    flex: 4;
+    /* background-color: black; */
+}
+
+.space {
+    flex: 1;
 }

@@ -3,11 +3,12 @@ import React, { useState, useEffect } from 'react';
 // import { User } from "../../../../Server/models/User";
 import axios from 'axios'
 import './Profile.css'
+import pro from '../../Photos/profile.jpg'
 const Profile = () => {
     const [Name, setName] = useState("");
     const [Email, setEmail] = useState("");
     const [Gender, setGender] = useState("");
-    const [CvNum, setCvNum] =useState(0);
+    const [CvNum, setCvNum] = useState(0);
 
 
 
@@ -27,9 +28,9 @@ const Profile = () => {
 
             setName(ob.fullName);
             setEmail(ob.email);
-            setGender(ob.gender);   
-            setCvNum(ob.CvNum);     
-            
+            setGender(ob.gender);
+            setCvNum(ob.CvNum);
+
 
 
         }
@@ -37,15 +38,25 @@ const Profile = () => {
             console.log(error);
         }
     }
-    useEffect(()=>{
+    useEffect(() => {
         fetchData();
     });
 
     return (
         <div className="main-Profile-Con">
-            <div className="Header-Profile"> Welcome {CvNum}  </div>
+            <div className="Header-Profile"> Welcome {'Mariam'}  </div>
             <div className="form-Profile">
+                <div className="space"></div>
+                <div className="img-Profile">
+                    <img src={pro}></img>
+                </div>
+                <div className="space"></div>
+                <div className="data-Profile">
+                    <div >Name :</div>
+                    <div> Emial :</div>
 
+                </div>
+                <div className="space"></div>
             </div>
             <div className="grid-Profile">
 
