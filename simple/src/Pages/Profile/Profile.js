@@ -4,9 +4,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import './Profile.css'
 const Profile = () => {
-    const [Name, setName] = useState();
-    const [Email, setEmail] = useState(" ");
-    const [Gender, setGender] = useState(" ");
+    const [Name, setName] = useState("");
+    const [Email, setEmail] = useState("");
+    const [Gender, setGender] = useState("");
+    const [CvNum, setCvNum] =useState(0);
 
 
 
@@ -14,17 +15,21 @@ const Profile = () => {
         try {
             const response = await axios({
                 method: "get",
-                url: "http://localhost:8080/User/",
-
+                url: "http://localhost:8080/auth/me",
+                headers: {
+                    Authorization: `Bearer ${localStorage.getItem("token")}`
+                },
 
             })
             console.log(response.data);
-            let ob = response.data;
+            let ob = response.data.user;
 
 
-            setName(ob.FullName);
-            setEmail(ob.Email);
-            setGender(ob.Gender);
+            setName(ob.fullName);
+            setEmail(ob.email);
+            setGender(ob.gender);   
+            setCvNum(ob.CvNum);     
+            
 
 
         }
@@ -32,13 +37,13 @@ const Profile = () => {
             console.log(error);
         }
     }
-    useEffect(() => {
+    useEffect(()=>{
         fetchData();
     });
 
     return (
         <div className="main-Profile-Con">
-            <div className="Header-Profile"> Welcome{Name}  </div>
+            <div className="Header-Profile"> Welcome {CvNum}  </div>
             <div className="form-Profile">
 
             </div>

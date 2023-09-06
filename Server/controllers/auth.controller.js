@@ -70,6 +70,7 @@ const authController = {
             res.status(500).json({ error: "An error occurred while fetching your data." });
 
         }
-    }
+    },
+    
 };
 export default authController;

@@ -20,6 +20,10 @@ type: String,
 enum: ["Male", "Female"],
 required: true,
 },
+CvNum:{
+    type:Number,
+     default:0,
+}
 });
 const User = model('User', userSchema);
 // Sign up validation schema

@@ -7,6 +7,7 @@ const CvController = {
             if(!req.user._id)
             return res.status(400).json({ error: "You must login first" });
             const  UserId = req.user._id;
+            const cn=req.user.CvNum;
             // Check if the user already exists  
             let found=await User.findById(UserId);    
             if(!found)
@@ -14,6 +15,7 @@ const CvController = {
             
             let cv = new Cv({ ...req.body,UserId:UserId });
               await cv.save();
+              let found2=await User.findByIdAndUpdate(UserId,{CvNum:cn+1});   
               res.json({cv});
         }catch (error) {
             console.log(error);
