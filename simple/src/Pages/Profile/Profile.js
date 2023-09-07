@@ -41,151 +41,78 @@ const Profile = () => {
     useEffect(() => {
         fetchData();
     });
+    // function readURL(input) {
+    //     if (input.files && input.files[0]) {
+    //         var reader = new FileReader();
+    //         reader.onload = function (e) {
+
+    //             // ('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+    //             // ('#imagePreview').hide();
+    //             // ('#imagePreview').fadeIn(650);
+    //         }
+    //         reader.readAsDataURL(input.files[0]);
+    //     }
+    // }
+
+
+    const [image, setimage] = useState("");
+
+
+    // ("#imageUpload").onchange(function () {
+    //     readURL(this);
+    // });
 
     return (
         <div className="main-profile">
-        <div className="main-profile-grid">
-            <div className="user-info">
-               <img src={pro} alt="user pic" />
-               <h2>user name</h2>
-               <button>edit your data</button> {/*should navigate to resume page*/}
+            {/* <div className="user-info">
+                <img src={pro} alt="user pic" />
+                <h2>{Name}</h2>
+                <h3>{Email}</h3>
+                 <h3>{Gender}</h3>
+                <button>edit your data</button>
 
-            </div>
-            <div className="profile-card">
-                <h2 className="profile-card-title">card title</h2>
-                <div className="profile-info-card">
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
-
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
-
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
-
+            </div> */}
+            <div class="avatar-upload">
+                <div class="avatar-edit">
+                    <input type='file' id="imageUpload" onChange={(token) => setimage(token.target.value)} accept=".png, .jpg, .jpeg" />
+                    <label for="imageUpload " > {image && (<img src={image}></img>)} </label>
                 </div>
+                <div class="avatar-preview">
+                    <div id="imagePreview">
 
+                    </div>
+                </div>
             </div>
+            <h2>user Name {Name}</h2>
+            <h3> Uset Email{Email}</h3>
+            <h3> User GEnder{Gender}</h3>
 
             <div className="profile-card">
-                <h2 className="profile-card-title">card title</h2>
-                <div className="profile-info-card">
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
-
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
-
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
-                    
+                {/* <div className="cards">
+                    <p> MY RESUME <span>{1}</span></p>
                 </div>
+                <div className="cards">
+                    <p> MY RESUME <span>{2}</span></p>
+                </div>
+                <div className="cards">
+                    <p>MY RESUME <span>{3}</span></p>
+                </div>
+                <div className="cards">
+                    <p> MY RESUME <span>{4}</span></p>
+                </div> */}
+
+                {() => {
+                    for (let i; i < CvNum; i++) {
+                        return (
+                            <div className="cards">
+                                <p>RESUME <span>{i}</span></p>
+                            </div>)
+                    }
+                }}
 
             </div>
 
-            <div className="profile-card">
-                <h2 className="profile-card-title">card title</h2>
-                <div className="profile-info-card">
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
 
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
-
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
-                    
-                </div>
-
-            </div>
-
-            <div className="profile-card">
-                <h2 className="profile-card-title">card title</h2>
-                <div className="profile-info-card">
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
-
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
-
-                    <div className="profile-item">
-                    <h4>email</h4>
-                    <p>ay haga</p>
-                    </div>
-                    
-                </div>
-
-            </div>
-
-            
-        </div>
-        <div className="big-card-grid">
-                <div className="big-card-item">
-                    <h3>card title</h3>
-                    <div className="big-card-info">
-                        <div className="big-card-field">
-                            <h4>email</h4>
-                            <p>ay haga</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="big-card-item">
-                    <h3>card title</h3>
-                    <div className="big-card-info">
-                        <div className="big-card-field">
-                            <h4>email</h4>
-                            <p>ay haga</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="big-card-item">
-                    <h3>card title</h3>
-                    <div className="big-card-info">
-                        <div className="big-card-field">
-                            <h4>email</h4>
-                            <p>ay haga</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="big-card-item">
-                    <h3>card title</h3>
-                    <div className="big-card-info">
-                        <div className="big-card-field">
-                            <h4>email</h4>
-                            <p>ay haga</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        <div className="resume-grid">
-
-        </div>
         </div>
 
     );
