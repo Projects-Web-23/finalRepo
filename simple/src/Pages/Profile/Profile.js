@@ -43,25 +43,149 @@ const Profile = () => {
     });
 
     return (
-        <div className="main-Profile-Con">
-            <div className="Header-Profile"> Welcome {'Mariam'}  </div>
-            <div className="form-Profile">
-                <div className="space"></div>
-                <div className="img-Profile">
-                    <img src={pro}></img>
-                </div>
-                <div className="space"></div>
-                <div className="data-Profile">
-                    <div >Name :</div>
-                    <div> Emial :</div>
-
-                </div>
-                <div className="space"></div>
-            </div>
-            <div className="grid-Profile">
+        <div className="main-profile">
+        <div className="main-profile-grid">
+            <div className="user-info">
+               <img src={pro} alt="user pic" />
+               <h2>user name</h2>
+               <button>edit your data</button> {/*should navigate to resume page*/}
 
             </div>
+            <div className="profile-card">
+                <h2 className="profile-card-title">card title</h2>
+                <div className="profile-info-card">
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
 
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
+
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div className="profile-card">
+                <h2 className="profile-card-title">card title</h2>
+                <div className="profile-info-card">
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
+
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
+
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div className="profile-card">
+                <h2 className="profile-card-title">card title</h2>
+                <div className="profile-info-card">
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
+
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
+
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div className="profile-card">
+                <h2 className="profile-card-title">card title</h2>
+                <div className="profile-info-card">
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
+
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
+
+                    <div className="profile-item">
+                    <h4>email</h4>
+                    <p>ay haga</p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            
+        </div>
+        <div className="big-card-grid">
+                <div className="big-card-item">
+                    <h3>card title</h3>
+                    <div className="big-card-info">
+                        <div className="big-card-field">
+                            <h4>email</h4>
+                            <p>ay haga</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="big-card-item">
+                    <h3>card title</h3>
+                    <div className="big-card-info">
+                        <div className="big-card-field">
+                            <h4>email</h4>
+                            <p>ay haga</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="big-card-item">
+                    <h3>card title</h3>
+                    <div className="big-card-info">
+                        <div className="big-card-field">
+                            <h4>email</h4>
+                            <p>ay haga</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="big-card-item">
+                    <h3>card title</h3>
+                    <div className="big-card-info">
+                        <div className="big-card-field">
+                            <h4>email</h4>
+                            <p>ay haga</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        <div className="resume-grid">
+
+        </div>
         </div>
 
     );
