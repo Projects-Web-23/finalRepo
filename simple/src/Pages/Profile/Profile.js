@@ -30,7 +30,7 @@ const Profile = () => {
             setEmail(ob.email);
             setGender(ob.gender);
             setCvNum(ob.CvNum);
-
+      
 
 
         }
@@ -57,7 +57,11 @@ const Profile = () => {
 
     const [image, setimage] = useState("");
 
-
+    let arr=[];
+    for(let i=1;i<=CvNum;i++)
+    {
+      arr=[...arr,i];
+    }
     // ("#imageUpload").onchange(function () {
     //     readURL(this);
     // });
@@ -83,9 +87,9 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
-            <h2>user Name {Name}</h2>
-            <h3> Uset Email{Email}</h3>
-            <h3> User GEnder{Gender}</h3>
+            <h2>User Name : {Name}</h2>
+            <h3> User Email : {Email}</h3>
+            <h3> User Gender : {Gender}</h3>
 
             <div className="profile-card">
                 {/* <div className="cards">
@@ -101,14 +105,26 @@ const Profile = () => {
                     <p> MY RESUME <span>{4}</span></p>
                 </div> */}
 
-                {() => {
-                    for (let i; i < CvNum; i++) {
+                {/*{() => {
+                    for (let i=0; i < CvNum; i++) {
                         return (
                             <div className="cards">
-                                <p>RESUME <span>{i}</span></p>
+                                <p>RESUME <span>{i+1}</span></p>
                             </div>)
                     }
-                }}
+                }}*/}
+                {
+                    arr.map((element) => {
+
+                        let s=`/Built/${element}`
+                            return (
+                                <Link to={s}><div className="cards">
+                                <p>RESUME <span>{element}</span></p>
+                            </div></Link>)}
+                       
+
+                    )}
+                
 
             </div>
 

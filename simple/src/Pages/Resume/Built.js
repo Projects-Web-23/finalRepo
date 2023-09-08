@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useParams } from 'react-router-dom'
 import { useReactToPrint } from 'react-to-print';
 import './BuiltResume.css';
 import axios from 'axios'
@@ -20,6 +21,7 @@ const BuiltResume = () => {
     const [Address, setAddress] = useState(" ");
     const [Phone, setPhone] = useState(" ");
     const [Summary, setSummary] = useState(" ");
+    let { id } = useParams();
 
     const [work, setWork] = useState([]);
     const [Skills, setSkills] = useState([]);
@@ -39,7 +41,7 @@ const BuiltResume = () => {
         try {
             const response = await axios({
                 method: "get",
-                url: "http://localhost:8080/Cv/",
+                url: `http://localhost:8080/Cv/${id}`,
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
                 },

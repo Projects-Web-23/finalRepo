@@ -23,7 +23,7 @@ function App() {
             <Route path="/Signup"><Signup /></Route>
             <Route path="/About"><About /></Route>
             <Route path="/Login"><Login /></Route>
-            <Route path="/Built"><PrintPdf /></Route>
+            <Route path="/Built/:id"><PrintPdf /></Route>
             <Route path="/Profile"><Profile/></Route>
 
           </Switch>
