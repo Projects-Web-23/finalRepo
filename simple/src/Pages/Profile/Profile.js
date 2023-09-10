@@ -30,7 +30,7 @@ const Profile = () => {
             setEmail(ob.email);
             setGender(ob.gender);
             setCvNum(ob.CvNum);
-      
+
 
 
         }
@@ -57,34 +57,48 @@ const Profile = () => {
 
     const [image, setimage] = useState("");
 
-    let arr=[];
-    for(let i=1;i<=CvNum;i++)
-    {
-      arr=[...arr,i];
+    let arr = [];
+    for (let i = 1; i <= CvNum; i++) {
+        arr = [...arr, i];
     }
     // ("#imageUpload").onchange(function () {
     //     readURL(this);
     // });
 
+
+
+    function handleFileChange(event) {
+        const file = event.target.files[0];
+        readURL(file);
+    }
+    function readURL(file) {
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const result = e.target.result;
+                setimage(result);
+
+                console.log(result);
+            };
+
+            reader.readAsDataURL(file);
+        }
+
+    };
     return (
         <div className="main-profile">
-            {/* <div className="user-info">
-                <img src={pro} alt="user pic" />
-                <h2>{Name}</h2>
-                <h3>{Email}</h3>
-                 <h3>{Gender}</h3>
-                <button>edit your data</button>
-
-            </div> */}
             <div class="avatar-upload">
-                <div class="avatar-edit">
-                    <input type='file' id="imageUpload" onChange={(token) => setimage(token.target.value)} accept=".png, .jpg, .jpeg" />
-                    <label for="imageUpload " > {image && (<img src={image}></img>)} </label>
-                </div>
                 <div class="avatar-preview">
                     <div id="imagePreview">
-
+                        {image && <img src={image} alt="user pic" />}
                     </div>
+                </div>
+                <div class="avatar-edit">
+                    <input type='file' id="imageUpload" onChange={handleFileChange} accept=".png, .jpg, .jpeg" ></input>
+
+                    <label for="imageUpload " > </label>
                 </div>
             </div>
             <h2>User Name : {Name}</h2>
@@ -92,39 +106,20 @@ const Profile = () => {
             <h3> User Gender : {Gender}</h3>
 
             <div className="profile-card">
-                {/* <div className="cards">
-                    <p> MY RESUME <span>{1}</span></p>
-                </div>
-                <div className="cards">
-                    <p> MY RESUME <span>{2}</span></p>
-                </div>
-                <div className="cards">
-                    <p>MY RESUME <span>{3}</span></p>
-                </div>
-                <div className="cards">
-                    <p> MY RESUME <span>{4}</span></p>
-                </div> */}
 
-                {/*{() => {
-                    for (let i=0; i < CvNum; i++) {
-                        return (
-                            <div className="cards">
-                                <p>RESUME <span>{i+1}</span></p>
-                            </div>)
-                    }
-                }}*/}
                 {
                     arr.map((element) => {
 
-                        let s=`/Built/${element}`
-                            return (
-                                <Link to={s}><div className="cards">
+                        let s = `/Built/${element}`
+                        return (
+                            <Link to={s}><div className="cards">
                                 <p>RESUME <span>{element}</span></p>
-                            </div></Link>)}
-                       
+                            </div></Link>)
+                    }
+
 
                     )}
-                
+
 
             </div>
 
